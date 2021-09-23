@@ -166,34 +166,32 @@ def test_sort(sort_algorithm):
     print("ok" if arr == arr_sorted else "Fail")
 
 
-# recursion functions
+if __name__ == "__main__":
 
+    length_array = int(input("Enter number of array"))
+    A, B = [0] * length_array, [0] * length_array
 
+    A1 = [True] * length_array
+    for n in range(length_array):
+        A[n] = random.randint(1, 50)
+        B[n] = random.randint(1, 50)
 
-length_array = int(input("Enter number of array"))
-A, B = [0] * length_array, [0] * length_array
+    print(A)
+    # print(cicle_move(A))
+    # test_array_search()
+    # test_invert_array()
 
-A1 = [True] * length_array
-for n in range(length_array):
-    A[n] = random.randint(1, 50)
-    B[n] = random.randint(1, 50)
+    # A2 = []
+    # for k in range(10):
+    #     A2.append(random.randint(1, 100))
+    # print(A2)
+    # A3 = [x ** 2 for x in range(10)]
+    # print(A3)
+    # B = [x ** 2 if x % 2 == 0 else 0 for x in A3]
+    print(B)
+    print(selection_sort(A))
+    print(bubble_sort(B))
 
-print(A)
-# print(cicle_move(A))
-# test_array_search()
-# test_invert_array()
-
-# A2 = []
-# for k in range(10):
-#     A2.append(random.randint(1, 100))
-# print(A2)
-# A3 = [x ** 2 for x in range(10)]
-# print(A3)
-# B = [x ** 2 if x % 2 == 0 else 0 for x in A3]
-print(B)
-print(selection_sort(A))
-print(bubble_sort(B))
-
-test_sort(insert_sort)
-test_sort(bubble_sort)
-test_sort(selection_sort)
+    test_sort(insert_sort)
+    test_sort(bubble_sort)
+    test_sort(selection_sort)
